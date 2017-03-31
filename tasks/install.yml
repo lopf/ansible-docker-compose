@@ -4,10 +4,7 @@
   action: "{{ ansible_pkg_mgr }} pkg={{ item }} state=present"
   with_items:
     - python-setuptools
-
-- name: Installing dependencies
-  easy_install:
-    name: pip
+    - python-pip
 
 - name: Installing docker compose
   pip:
